@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <!-- Minimalist Architectural Arch / Furniture Form -->
+  <g transform="translate(4, 5)">
+    <path d="M4 36V14C4 8.47715 8.47715 4 14 4H26C31.5228 4 36 8.47715 36 14V36" stroke="#24221F" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M10 24H30" stroke="#A66A4C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="20" cy="14" r="3" fill="#A66A4C" />
+  </g>
+  
+  <!-- Typography: BYTECART -->
+  <text x="54" y="28" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="700" font-size="20" letter-spacing="0.08em" fill="#24221F">
+    BYTECART
+  </text>
+  <text x="55" y="40" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="500" font-size="7.5" letter-spacing="0.22em" fill="#77716A">
+    PRIVATE LIMITED
+  </text>
+</svg>

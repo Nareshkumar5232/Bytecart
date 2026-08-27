@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    --bg-ivory: #F4F0E8;
+    --bg-beige: #E8E0D5;
+    --bg-cream: #FAF8F5;
+    --text-charcoal: #24221F;
+    --text-warm-gray: #77716A;
+    --text-light-gray: #9E9890;
+    --accent-terracotta: #A66A4C;
+    --accent-sandstone: #C08A6A;
+    --accent-terracotta-hover: #8C5539;
+    --accent-olive: #4A493D;
+    --border-warm: #E2DBD0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F4F0E8;
+    color: #24221F;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif, .serif-heading {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Editorial Utilities */
+.font-serif {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+.bg-warm-ivory {
+  background-color: #F4F0E8;
+}
+
+.bg-soft-beige {
+  background-color: #E8E0D5;
+}
+
+.bg-deep-charcoal {
+  background-color: #24221F;
+}
+
+.text-deep-charcoal {
+  color: #24221F;
+}
+
+.text-warm-gray {
+  color: #77716A;
+}
+
+.text-terracotta {
+  color: #A66A4C;
+}
+
+.text-sandstone {
+  color: #C08A6A;
+}
+
+.border-warm {
+  border-color: #E2DBD0;
+}
+
+/* Glass & Blur in warm neutral */
+.glass-warm {
+  background: rgba(244, 240, 232, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-dark-warm {
+  background: rgba(36, 34, 31, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom Scrollbar in warm stone */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4CCC1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8ADA0;
+}
+
+/* Smooth Image Scale Transitions */
+.editorial-img-hover {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+.editorial-img-hover:hover {
+  transform: scale(1.035);
+}
