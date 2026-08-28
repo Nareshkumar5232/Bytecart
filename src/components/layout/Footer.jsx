@@ -71,7 +71,7 @@ export const TextHoverEffect = ({
       )}
     >
       <defs>
-        {/* Warm furniture-inspired gradient */}
+        {/* Warm tech-inspired gradient */}
         <linearGradient
           id="bytecartTextGradient"
           gradientUnits="userSpaceOnUse"
@@ -225,21 +225,35 @@ export const FooterBackgroundGradient = () => {
 export function HoverFooter() {
   const footerLinks = [
     {
-      title: "Explore",
+      title: "BYTECART Categories",
       links: [
-        { label: "Home", href: "/" },
-        { label: "Collection", href: "/products" },
-        { label: "Categories", href: "/categories" },
-        { label: "About Us", href: "/about" },
+        { label: "Laptops", href: "/products?category=laptops" },
+        { label: "Desktops", href: "/products?category=desktops" },
+        { label: "Monitors", href: "/products?category=monitors" },
+        { label: "PC Components", href: "/products?category=pc-components" },
+        { label: "Accessories", href: "/products?category=accessories" },
+        { label: "Gaming", href: "/products?category=gaming" },
+        { label: "Storage", href: "/products?category=storage" },
+        { label: "Networking", href: "/products?category=networking" },
       ],
     },
     {
-      title: "Customer Sanctuary",
+      title: "Customer Support",
       links: [
-        { label: "My Account", href: "/account" },
+        { label: "FAQs", href: "/contact?subject=FAQs" },
+        { label: "Shipping", href: "/contact?subject=Shipping" },
+        { label: "Returns", href: "/contact?subject=Returns" },
+        { label: "Warranty", href: "/contact?subject=Warranty" },
+        { label: "Contact Us", href: "/contact" },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", href: "/about" },
         { label: "My Orders", href: "/my-orders" },
         { label: "Wishlist", href: "/wishlist" },
-        { label: "Direct Studio Contact", href: "/contact" },
+        { label: "Account", href: "/account" },
       ],
     },
   ];
@@ -311,8 +325,8 @@ export function HoverFooter() {
             items-start
           "
         >
-          {/* BRAND (Span 5) */}
-          <div className="lg:col-span-5 flex flex-col space-y-4">
+          {/* BRAND (Span 4) */}
+          <div className="lg:col-span-4 flex flex-col space-y-4">
             <Logo light={true} />
 
             <p
@@ -324,7 +338,7 @@ export function HoverFooter() {
                 font-light
               "
             >
-              Thoughtfully selected furniture for contemporary spaces, comfortable living, and timeless interiors.
+              Thoughtfully selected electronics for contemporary spaces, high performance, and timeless design.
             </p>
 
             <Link
@@ -419,8 +433,8 @@ export function HoverFooter() {
             </div>
           ))}
 
-          {/* CONTACT DETAILS (Span 3) */}
-          <div className="lg:col-span-3">
+          {/* CONTACT DETAILS (Span 2) */}
+          <div className="lg:col-span-2">
             <h4
               className="
                 text-[11px]
@@ -544,7 +558,7 @@ export function HoverFooter() {
                 shrink-0
               "
             >
-              <span>View consultation details</span>
+              <span>Contact customer support</span>
               <ArrowUpRight
                 size={13}
                 className="

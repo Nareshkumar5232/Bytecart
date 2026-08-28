@@ -102,7 +102,7 @@ export default function Checkout() {
     return (
       <div className="pt-36 pb-28 max-w-md mx-auto px-4 text-center space-y-4">
         <h2 className="text-2xl font-serif text-[#24221F]">No items to checkout</h2>
-        <p className="text-xs text-[#77716A]">Your cart is empty. Please select furniture pieces to proceed.</p>
+        <p className="text-xs text-[#77716A]">Your cart is empty. Please select product items to proceed.</p>
         <Link
           to="/products"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#24221F] text-white text-xs font-semibold uppercase tracking-wider"
@@ -589,7 +589,7 @@ export default function Checkout() {
                           </span>
                         </div>
                         <p className="text-xs text-[#77716A]">
-                          Pay in cash or UPI QR scan when your piece is delivered by our white-glove logistics team.
+                          Pay in cash or UPI QR scan when your order is delivered by our secure delivery team.
                         </p>
                       </div>
                     </div>
@@ -629,7 +629,7 @@ export default function Checkout() {
         <div className="lg:col-span-5 bg-[#EAE4DA]/40 rounded-3xl p-8 border border-[#E2DBD0] space-y-6">
           <div className="flex justify-between items-baseline border-b border-[#E2DBD0] pb-4">
             <h3 className="text-lg font-serif text-[#24221F]">Order Summary</h3>
-            <span className="text-xs text-[#77716A]">{checkoutItems.length} {checkoutItems.length === 1 ? 'Piece' : 'Pieces'}</span>
+            <span className="text-xs text-[#77716A]">{checkoutItems.length} {checkoutItems.length === 1 ? 'Item' : 'Items'}</span>
           </div>
 
           {/* Items Preview */}

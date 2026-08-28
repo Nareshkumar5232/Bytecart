@@ -36,8 +36,8 @@ export default function Login() {
         {/* Left Column: Editorial Architectural Photography (Span 6) */}
         <div className="hidden lg:flex lg:col-span-6 relative bg-[#24221F] text-[#F4F0E8] p-12 flex-col justify-between overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
-            alt="Interior design living room"
+            src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
+            alt="Technology workspace setup"
             className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#24221F] via-[#24221F]/60 to-transparent" />
@@ -45,22 +45,22 @@ export default function Login() {
           <div className="relative z-10">
             <Link to="/" className="inline-flex items-center gap-1 text-xs uppercase tracking-widest text-[#C08A6A] hover:text-white transition-colors mb-6">
               <ChevronLeft className="w-4 h-4" />
-              <span>Back to Atelier</span>
+              <span>Back to Store</span>
             </Link>
             <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#C08A6A] block">
-              Customer Sanctuary
+              Customer Portal
             </span>
             <h2 className="text-3xl xl:text-4xl font-serif text-[#F4F0E8] mt-2 leading-tight">
-              Welcome back to your curated space.
+              Welcome back to your Bytecart account.
             </h2>
           </div>
 
           <div className="relative z-10 space-y-3 border-t border-[#4A4642] pt-6">
             <p className="text-xs text-[#BDB6AF] font-light leading-relaxed">
-              “Every room is an ongoing dialogue between light, timber, and the quiet pieces you surround yourself with.”
+              “Connecting you with premium technology and high-performance computing components.”
             </p>
             <span className="text-[10px] uppercase font-bold tracking-widest text-[#C08A6A] block">
-              Bytecart Atelier • Anna Nagar, Chennai
+              Bytecart Private Limited • Anna Nagar, Chennai
             </span>
           </div>
         </div>

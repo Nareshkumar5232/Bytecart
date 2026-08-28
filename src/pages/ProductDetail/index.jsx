@@ -101,9 +101,9 @@ export default function ProductDetail() {
   if (!product) {
     return (
       <div className="pt-36 pb-24 max-w-md mx-auto px-4 text-center space-y-4">
-        <h2 className="text-2xl font-serif text-[#24221F]">Piece Not Found</h2>
+        <h2 className="text-2xl font-serif text-[#24221F]">Product Not Found</h2>
         <p className="text-xs text-[#77716A]">
-          The requested furniture item could not be found in our current catalogue.
+          The requested product could not be found in our current catalogue.
         </p>
         <Link
           to="/products"
@@ -227,7 +227,7 @@ export default function ProductDetail() {
           {/* Material & Dimensions Summary */}
           <div className="border-y border-[#E2DBD0] py-4 space-y-2.5 text-xs">
             <div className="flex justify-between">
-              <span className="text-[#77716A]">Primary Material</span>
+              <span className="text-[#77716A]">Build Quality</span>
               <span className="text-[#24221F] font-medium">{product.material}</span>
             </div>
             {product.finish && (
@@ -243,7 +243,7 @@ export default function ProductDetail() {
               </div>
             )}
             <div className="flex justify-between">
-              <span className="text-[#77716A]">Atelier Availability</span>
+              <span className="text-[#77716A]">Availability</span>
               <span className="text-[#A66A4C] font-semibold">{product.availability}</span>
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function ProductDetail() {
           <div className="pt-2 flex items-center justify-between text-[11px] text-[#77716A]">
             <span>{product.warranty}</span>
             <span>•</span>
-            <span>Complimentary White-Glove Placement</span>
+            <span>Secured Insured Shipping</span>
           </div>
         </div>
       </div>
@@ -317,7 +317,7 @@ export default function ProductDetail() {
       {/* Full Specifications Section */}
       <div className="border-t border-[#E2DBD0] pt-12 space-y-6">
         <h3 className="text-2xl sm:text-3xl font-serif text-[#24221F]">
-          Specifications & Material Integrity
+          Specifications & Build Quality
         </h3>
         <div className="divide-y divide-[#E2DBD0] border-y border-[#E2DBD0]">
           {Object.entries(product.specs || {}).map(([specKey, specVal]) => (
@@ -331,7 +331,7 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      {/* Related Furniture Recommendations */}
+      {/* Related Product Recommendations */}
       {relatedProducts.length > 0 && (
         <div className="space-y-8 pt-8 border-t border-[#E2DBD0]">
           <div className="flex justify-between items-end">

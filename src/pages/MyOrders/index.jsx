@@ -72,7 +72,7 @@ export default function MyOrders() {
           My Orders
         </h1>
         <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light">
-          Track fulfillment status, view invoices, and inspect dispatch timelines for your furniture pieces.
+          Track fulfillment status, view invoices, and inspect dispatch timelines for your products.
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function MyOrders() {
           </div>
           <h3 className="text-2xl font-serif text-[#24221F]">You haven't placed any orders yet.</h3>
           <p className="text-xs text-[#77716A] leading-relaxed font-light">
-            When you place an order for our handcrafted furniture, your receipt and live tracking will appear here.
+            When you place an order for our laptops, computers or accessories, your receipt and live tracking will appear here.
           </p>
           <Link
             to="/products"

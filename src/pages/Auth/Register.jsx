@@ -76,8 +76,8 @@ export default function Register() {
         {/* Left Column: Architectural Imagery & Studio Ethos (Span 6) */}
         <div className="hidden lg:flex lg:col-span-6 relative bg-[#24221F] text-[#F4F0E8] p-12 flex-col justify-between overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1540518614846-7ede433c4550?auto=format&fit=crop&w=1200&q=80"
-            alt="Interior design master bedroom"
+            src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"
+            alt="Modern laptop setup workspace"
             className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#24221F] via-[#24221F]/60 to-transparent" />
@@ -85,10 +85,10 @@ export default function Register() {
           <div className="relative z-10">
             <Link to="/" className="inline-flex items-center gap-1 text-xs uppercase tracking-widest text-[#C08A6A] hover:text-white transition-colors mb-6">
               <ChevronLeft className="w-4 h-4" />
-              <span>Back to Atelier</span>
+              <span>Back to Store</span>
             </Link>
             <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#C08A6A] block">
-              Begin Your Commission
+              Access Premium Tech
             </span>
             <h2 className="text-3xl xl:text-4xl font-serif text-[#F4F0E8] mt-2 leading-tight">
               Create an account with Bytecart.
@@ -97,10 +97,10 @@ export default function Register() {
 
           <div className="relative z-10 space-y-3 border-t border-[#4A4642] pt-6">
             <p className="text-xs text-[#BDB6AF] font-light leading-relaxed">
-              “Join our community of interior designers, architects, and homeowners shaping enduring living spaces.”
+              “Join our community of technology enthusiasts, developers, and creators scaling their computing power.”
             </p>
             <span className="text-[10px] uppercase font-bold tracking-widest text-[#C08A6A] block">
-              Direct Atelier Fulfillment • White-Glove In-Room Delivery
+              Official Manufacturer Warranty • Secured Insured Shipping
             </span>
           </div>
         </div>

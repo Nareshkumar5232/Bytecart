@@ -160,7 +160,7 @@ export default function CartDrawer() {
                         <button
                           onClick={() => removeFromCart(product.id)}
                           className="text-[#9E9890] hover:text-[#A66A4C] p-1 transition-colors"
-                          title="Remove piece"
+                          title="Remove product"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>

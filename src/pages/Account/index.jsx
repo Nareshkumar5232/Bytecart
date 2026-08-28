@@ -101,7 +101,7 @@ export default function Account() {
           <h3 className="text-lg font-serif text-[#24221F] group-hover:text-[#A66A4C] transition-colors">
             My Orders
           </h3>
-          <p className="text-xs text-[#77716A]">Track current dispatches and previous piece orders.</p>
+          <p className="text-xs text-[#77716A]">Track current dispatches and previous product orders.</p>
         </Link>
 
         <Link
@@ -164,7 +164,7 @@ export default function Account() {
                     </span>
                   </div>
                   <p className="text-xs text-[#77716A]">
-                    {order.items?.length} {order.items?.length === 1 ? 'Piece' : 'Pieces'} • {formatCurrency(order.total)}
+                    {order.items?.length} {order.items?.length === 1 ? 'Item' : 'Items'} • {formatCurrency(order.total)}
                   </p>
                 </div>
 

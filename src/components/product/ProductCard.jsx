@@ -76,7 +76,7 @@ export default function ProductCard({ product, layout = 'grid' }) {
               <Link
                 to={`/products/${product.slug}`}
                 className="p-2 rounded-full bg-[#24221F] text-white hover:bg-[#A66A4C] transition-colors"
-                title="View piece"
+                title="View product"
               >
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>

@@ -18,7 +18,7 @@ export default function Wishlist() {
 
         <div className="space-y-2">
           <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-            Saved Pieces
+            Saved Products
           </span>
           <h1 className="text-3xl sm:text-4xl font-serif text-[#24221F]">
             Your wishlist is empty.

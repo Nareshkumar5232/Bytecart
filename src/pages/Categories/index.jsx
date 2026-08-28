@@ -25,13 +25,13 @@ export default function Categories() {
       {/* Header */}
       <div className="max-w-3xl space-y-3 border-b border-[#E2DBD0] pb-8">
         <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-          Atmospheric Taxonomy
+          Product Taxonomy
         </span>
         <h1 className="text-4xl sm:text-6xl font-serif text-[#24221F] tracking-tight">
-          Spaces & Room Domains
+          Technology & Hardware Domains
         </h1>
         <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light">
-          Each room domain is an exploration in light, proportions, honest materiality, and quiet daily sanctuary.
+          Explore our curated ranges of laptops, components, peripherals, and high-performance computing devices.
         </p>
       </div>
 
@@ -48,7 +48,7 @@ export default function Categories() {
           </div>
           <h3 className="text-2xl font-serif text-[#24221F]">No categories available yet.</h3>
           <p className="text-xs text-[#77716A] leading-relaxed font-light">
-            Room domains configured in the atelier catalogue will be displayed here.
+            Categories configured in the catalogue will be displayed here.
           </p>
           <Link
             to="/products"
@@ -104,7 +104,7 @@ export default function Categories() {
               </div>
 
               <div className="pt-4 border-t border-[#E2DBD0]/60 flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-[#24221F] group-hover:text-[#A66A4C]">
-                <span>Explore Domain</span>
+                <span>Explore Category</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>

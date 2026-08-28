@@ -63,7 +63,7 @@ export default function Cart() {
             Order Review
           </span>
           <h1 className="text-3xl sm:text-5xl font-serif text-[#24221F] tracking-tight mt-1">
-            Shopping Cart ({items.length} {items.length === 1 ? 'Piece' : 'Pieces'})
+            Shopping Cart ({items.length} {items.length === 1 ? 'Item' : 'Items'})
           </h1>
         </div>
         <Link
@@ -160,16 +160,16 @@ export default function Cart() {
             <div className="p-4 rounded-2xl bg-[#EAE4DA]/30 border border-[#E2DBD0]/60 flex items-center gap-3">
               <Truck className="w-4 h-4 text-[#A66A4C] shrink-0" />
               <div className="text-xs">
-                <p className="font-semibold text-[#24221F]">White-Glove Placement</p>
-                <p className="text-[#77716A] text-[11px]">Complimentary in-room assembly</p>
+                <p className="font-semibold text-[#24221F]">Insured Delivery</p>
+                <p className="text-[#77716A] text-[11px]">Complimentary secure packaging</p>
               </div>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#EAE4DA]/30 border border-[#E2DBD0]/60 flex items-center gap-3">
               <ShieldCheck className="w-4 h-4 text-[#A66A4C] shrink-0" />
               <div className="text-xs">
-                <p className="font-semibold text-[#24221F]">Timber Integrity Warranty</p>
-                <p className="text-[#77716A] text-[11px]">Up to 10 years structural coverage</p>
+                <p className="font-semibold text-[#24221F]">Official Brand Warranty</p>
+                <p className="text-[#77716A] text-[11px]">Up to 2 years manufacturer coverage</p>
               </div>
             </div>
           </div>

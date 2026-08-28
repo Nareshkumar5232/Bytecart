@@ -25,7 +25,7 @@ export function WishlistProvider({ children }) {
   const removeFromWishlist = async (productId) => {
     const updated = await wishlistService.removeFromWishlist(productId);
     setWishlistItems(updated);
-    addToast('Removed piece from wishlist.', 'info');
+    addToast('Removed product from wishlist.', 'info');
   };
 
   const toggleWishlist = async (product) => {

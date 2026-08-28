@@ -5,7 +5,7 @@ import { useToast } from '../../context/ToastContext';
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
-  const initialSubject = searchParams.get('subject') || 'Custom Furniture Inquiry';
+  const initialSubject = searchParams.get('subject') || 'Custom Product Inquiry';
   const skuParam = searchParams.get('sku') || '';
 
   const { addToast } = useToast();
@@ -15,7 +15,7 @@ export default function Contact() {
     email: '',
     phone: '',
     subject: initialSubject,
-    message: skuParam ? `Inquiry regarding piece (${skuParam}). Please share bespoke sizing, fabric samples, and delivery timelines.` : '',
+    message: skuParam ? `Inquiry regarding product (${skuParam}). Please share specifications and delivery timelines.` : '',
   });
 
   const [submitting, setSubmitting] = useState(false);
@@ -42,12 +42,12 @@ export default function Contact() {
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
-      addToast('Thank you. Your inquiry has been received by our Chennai studio.', 'success', 5000);
+      addToast('Thank you. Your inquiry has been received by our Chennai office.', 'success', 5000);
       setFormData({
         name: '',
         email: '',
         phone: '',
-        subject: 'Custom Furniture Inquiry',
+        subject: 'Custom Product Inquiry',
         message: '',
       });
     }, 500);
@@ -58,13 +58,13 @@ export default function Contact() {
       {/* Header */}
       <div className="max-w-2xl space-y-3">
         <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-          Studio & Inquiries
+          Support & Inquiries
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#24221F] tracking-tight">
           Get in Touch
         </h1>
         <p className="text-sm sm:text-base text-[#77716A] leading-relaxed font-light">
-          Whether you’re commissioning custom timber dimensions, requesting bouclé fabric swatches, or seeking furniture consultation for your home, our team is here.
+          Whether you’re commissioning custom tech specifications, requesting component samples, or seeking electronics consultation for your setup, our team is here.
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export default function Contact() {
           <div className="bg-[#EAE4DA]/50 rounded-3xl p-8 sm:p-10 border border-[#E2DBD0] space-y-8">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A66A4C]">
-                Corporate Studio
+                Corporate Headquarters
               </span>
               <h3 className="text-2xl font-serif text-[#24221F] mt-1">
                 BYTECART PRIVATE LIMITED
@@ -88,7 +88,7 @@ export default function Contact() {
                 <MapPin className="w-4 h-4 text-[#A66A4C] shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-[#24221F] block uppercase tracking-wider text-[11px]">
-                    Registered Office & Studio
+                    Registered Office & Headquarters
                   </span>
                   <address className="not-italic leading-relaxed text-[#77716A] mt-1">
                     Flat No. 2, Plot No. 1051, I Block,<br />
@@ -120,7 +120,7 @@ export default function Contact() {
                 <Phone className="w-4 h-4 text-[#A66A4C] shrink-0" />
                 <div>
                   <span className="font-semibold text-[#24221F] block uppercase tracking-wider text-[11px]">
-                    Studio Telephone
+                    Office Telephone
                   </span>
                   <a
                     href="tel:04431544571"
@@ -144,7 +144,7 @@ export default function Contact() {
                 href="tel:04431544571"
                 className="flex-1 py-3 px-4 rounded-full border border-[#24221F] text-[#24221F] hover:bg-[#24221F] hover:text-white text-xs font-semibold uppercase tracking-wider text-center transition-colors"
               >
-                Call Studio
+                Call Office
               </a>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                 <div className="text-xs text-[#24221F]">
                   <p className="font-semibold">Inquiry Received</p>
                   <p className="text-[#77716A] mt-0.5">
-                    Thank you. A member of our design team will respond within 24 hours.
+                    Thank you. A member of our support team will respond within 24 hours.
                   </p>
                 </div>
               </div>
@@ -223,7 +223,7 @@ export default function Contact() {
 
                 <div className="space-y-1.5">
                   <label htmlFor="subject" className="text-xs font-medium uppercase tracking-wider text-[#77716A] block">
-                    Interest / Room
+                    Interest / Category
                   </label>
                   <select
                     id="subject"
@@ -232,12 +232,12 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-2xl bg-[#F5F2EC] border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all cursor-pointer"
                   >
-                    <option value="Custom Furniture Inquiry">Custom Furniture Inquiry</option>
-                    <option value="Living Room Seating">Living Room Seating</option>
-                    <option value="Dining Tables & Chairs">Dining Tables & Chairs</option>
-                    <option value="Travertine & Stone Pieces">Travertine & Stone Pieces</option>
-                    <option value="Fabric & Wood Swatches">Fabric & Wood Swatches</option>
-                    <option value="Trade & Interior Designer Orders">Trade & Interior Designer Orders</option>
+                    <option value="Custom Product Inquiry">Custom Product Inquiry</option>
+                    <option value="Laptops & Computers">Laptops & Computers</option>
+                    <option value="PC Components & Storage">PC Components & Storage</option>
+                    <option value="Monitors & Accessories">Monitors & Accessories</option>
+                    <option value="Corporate & Bulk Inquiries">Corporate & Bulk Inquiries</option>
+                    <option value="Enterprise & Institutional Solutions">Enterprise & Institutional Solutions</option>
                   </select>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your room dimensions, desired finish, or questions..."
+                  placeholder="Tell us about your hardware requirements, system specifications, or questions..."
                   className="w-full px-4 py-3 rounded-2xl bg-[#F5F2EC] border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all resize-y"
                 />
               </div>

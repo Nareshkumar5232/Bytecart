@@ -103,7 +103,7 @@ export default function SearchModal() {
                   handleViewAllResults();
                 }
               }}
-              placeholder="Search by piece name, category, or material..."
+              placeholder="Search by product name, category, or specifications..."
               className="flex-1 text-base sm:text-lg text-[#24221F] placeholder-[#9E9890] bg-transparent border-none outline-none font-serif"
             />
             {searchQuery && (
@@ -145,7 +145,7 @@ export default function SearchModal() {
             {/* Loading state */}
             {loading && (
               <div className="py-12 flex flex-col items-center justify-center text-[#77716A] space-y-2">
-                <p className="text-xs font-serif italic">Searching collection...</p>
+                <p className="text-xs font-serif italic">Searching catalogue...</p>
               </div>
             )}
 
@@ -153,7 +153,7 @@ export default function SearchModal() {
             {!loading && searchQuery.trim() !== '' && results.length > 0 && (
               <div className="space-y-2">
                 <p className="text-[10px] font-semibold text-[#77716A] uppercase tracking-[0.16em]">
-                  Matching Pieces ({results.length})
+                  Matching Products ({results.length})
                 </p>
                 {results.map((product) => (
                   <div
@@ -197,7 +197,7 @@ export default function SearchModal() {
             {/* No Results */}
             {!loading && searchQuery.trim() !== '' && results.length === 0 && (
               <div className="py-12 text-center space-y-2">
-                <p className="text-base font-serif text-[#24221F]">No furniture pieces found</p>
+                <p className="text-base font-serif text-[#24221F]">No product items found</p>
                 <p className="text-xs text-[#77716A] max-w-xs mx-auto">
                   We couldn’t find any matches for "{searchQuery}".
                 </p>

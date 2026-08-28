@@ -12,18 +12,18 @@ export default function About() {
         </span>
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif text-[#24221F] tracking-tight leading-[1.06]">
           We believe in <br />
-          <span className="italic font-normal">better spaces.</span>
+          <span className="italic font-normal">better technology.</span>
         </h1>
         <p className="text-base sm:text-lg text-[#77716A] leading-relaxed font-light">
-          BYTECART PRIVATE LIMITED is a contemporary furniture and home-living company founded on the principle that everyday objects should offer enduring comfort, honest materiality, and quiet beauty.
+          BYTECART PRIVATE LIMITED is a contemporary electronics and computer products company founded on the principle that everyday objects should offer enduring performance, honest materiality, and quiet elegance.
         </p>
       </div>
 
       {/* 2. Full-Width Lifestyle Imagery */}
       <div className="relative aspect-16/9 sm:aspect-21/9 rounded-3xl overflow-hidden bg-[#EAE4DA] shadow-md">
         <img
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80"
-          alt="Bytecart interior philosophy"
+          src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?auto=format&fit=crop&w=1600&q=80"
+          alt="Bytecart technology philosophy"
           className="w-full h-full object-cover"
         />
       </div>
@@ -32,25 +32,25 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-[#E2DBD0] pt-16">
         <div className="space-y-3">
           <span className="text-xs font-serif text-[#A66A4C] text-lg font-bold">01</span>
-          <h3 className="text-2xl font-serif text-[#24221F]">Honest Materials</h3>
+          <h3 className="text-2xl font-serif text-[#24221F]">Technology & Performance</h3>
           <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light">
-            We work with solid European white oak, American walnut, natural Italian travertine, and tactile wool bouclé yarn selected for natural character and enduring strength.
+            We curate laptops, computers, and components selected for high performance, reliability, and longevity.
           </p>
         </div>
 
         <div className="space-y-3">
           <span className="text-xs font-serif text-[#A66A4C] text-lg font-bold">02</span>
-          <h3 className="text-2xl font-serif text-[#24221F]">Everyday Comfort</h3>
+          <h3 className="text-2xl font-serif text-[#24221F]">Ergonomics & Productivity</h3>
           <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light">
-            Beauty without comfort is incomplete. Every seat depth, foam resilience curve, and dining table height is tuned for restorative relaxation and generous hosting.
+            Technology should integrate seamlessly into your workflow. Our keyboards, monitors, and setups are selected for comfort, speed, and long-term ergonomic support.
           </p>
         </div>
 
         <div className="space-y-3">
           <span className="text-xs font-serif text-[#A66A4C] text-lg font-bold">03</span>
-          <h3 className="text-2xl font-serif text-[#24221F]">Timeless Utility</h3>
+          <h3 className="text-2xl font-serif text-[#24221F]">Premium Quality</h3>
           <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light">
-            We resist fast-furniture trends, crafting restrained silhouettes and solid joinery designed to age gracefully alongside your changing home.
+            We provide devices from leading brands and manufacturers, featuring premium engineering and robust components designed to support you for years.
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function About() {
             to="/contact"
             className="w-full py-3.5 px-6 rounded-full border border-[#24221F] text-[#24221F] hover:bg-[#24221F] hover:text-white text-xs font-semibold uppercase tracking-wider text-center transition-colors"
           >
-            Contact Chennai Studio
+            Contact Chennai Office
           </Link>
         </div>
       </div>

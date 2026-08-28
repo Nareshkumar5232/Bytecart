@@ -90,7 +90,7 @@ export default function OrderSuccess() {
 
           {/* Items Purchased */}
           <div className="space-y-3 pt-2 border-t border-[#E2DBD0]">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#77716A]">Selected Furniture</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#77716A]">Selected Products</span>
             <div className="divide-y divide-[#E2DBD0]/60">
               {order.items?.map((item, idx) => (
                 <div key={idx} className="py-3 flex items-center justify-between gap-4 text-xs">

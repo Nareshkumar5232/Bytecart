@@ -30,7 +30,7 @@ export default function OrderDetails() {
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [cancelModalOpen, setCancelModalOpen] = useState(false);
-  const [cancelReason, setCancelReason] = useState('Changed mind regarding piece selection');
+  const [cancelReason, setCancelReason] = useState('Changed mind regarding product selection');
   const [cancelling, setCancelling] = useState(false);
 
   const { addToast } = useToast();
@@ -200,7 +200,7 @@ export default function OrderDetails() {
         <div className="lg:col-span-7 space-y-6">
           <div className="bg-[#EAE4DA]/30 rounded-3xl p-6 sm:p-8 border border-[#E2DBD0] space-y-6">
             <h3 className="text-lg font-serif text-[#24221F]">
-              Ordered Furniture ({order.items?.length})
+              Ordered Products ({order.items?.length})
             </h3>
 
             <div className="divide-y divide-[#E2DBD0]">
@@ -322,7 +322,7 @@ export default function OrderDetails() {
             </div>
 
             <p className="text-xs text-[#77716A] leading-relaxed">
-              Once cancelled, this furniture production and dispatch schedule will be stopped. Any online payments made will be reversed to the original payment source.
+              Once cancelled, this product packaging and dispatch schedule will be stopped. Any online payments made will be reversed to the original payment source.
             </p>
 
             <div className="space-y-1.5">
@@ -332,9 +332,9 @@ export default function OrderDetails() {
                 onChange={(e) => setCancelReason(e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl bg-[#EAE4DA]/60 border border-[#E2DBD0] text-xs text-[#24221F]"
               >
-                <option value="Changed mind regarding piece selection">Changed mind regarding piece selection</option>
-                <option value="Ordered incorrect dimensions">Ordered incorrect dimensions</option>
-                <option value="Found alternative furniture piece">Found alternative furniture piece</option>
+                <option value="Changed mind regarding product selection">Changed mind regarding product selection</option>
+                <option value="Ordered incorrect specifications / model">Ordered incorrect specifications / model</option>
+                <option value="Found alternative product">Found alternative product</option>
                 <option value="Delivery timeframe adjustment needed">Delivery timeframe adjustment needed</option>
               </select>
             </div>

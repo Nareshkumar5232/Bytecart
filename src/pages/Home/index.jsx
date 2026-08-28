@@ -55,22 +55,22 @@ export default function Home() {
 
   const materials = [
     {
-      title: 'Solid European White Oak',
-      origin: 'FSC-Certified Northern Forests',
-      desc: 'Selected for dense, interlocking grain structures and seasoned slowly in low-humidity kilns to resist seasonal warping in tropical climates.',
-      image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=800&q=80',
+      title: 'Laptops',
+      origin: 'Performance Machines',
+      desc: 'Performance machines for work, study and everyday computing.',
+      image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
     },
     {
-      title: 'Italian Wool & Cotton Bouclé',
-      origin: 'Biella Textile Mills, Italy',
-      desc: 'Woven with varying yarn tensions to create an inviting textural loop with exceptional 60,000 Martindale rub durability.',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80',
+      title: 'PC Components',
+      origin: 'System Upgrades',
+      desc: 'Build and upgrade your system with reliable computing hardware.',
+      image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80',
     },
     {
-      title: 'Honed Roman Travertine',
-      origin: 'Tivoli Quarry, Central Italy',
-      desc: 'Formed through geological calcium carbonate deposits, honed to a smooth matte finish that highlights organic cellular porosity.',
-      image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80',
+      title: 'Accessories',
+      origin: 'Complete Setup',
+      desc: 'Complete your setup with keyboards, mice, audio, storage and essential accessories.',
+      image: 'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80',
     },
   ];
 
@@ -90,15 +90,15 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-[#E8E0D5]/70 border border-[#E2DBD0] text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#A66A4C] animate-pulse" />
-              <span>Curated Living — Atelier 2026</span>
+              <span>Curated Tech — Edition 2026</span>
             </div>
 
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-6xl xl:text-7xl font-serif text-[#24221F] tracking-tight leading-[1.08]">
-                Furniture that gives your space a <span className="italic font-normal text-[#A66A4C]">character.</span>
+                Technology that moves with you.
               </h1>
               <p className="text-xs sm:text-sm md:text-base text-[#77716A] max-w-lg leading-relaxed font-light pt-2">
-                A study in sculptural silhouettes, natural European timber, and tactile textiles. Built for real spaces, intentional rituals, and slower living.
+                Laptops, computers and accessories for work, study, gaming and everything in between.
               </p>
             </div>
 
@@ -108,33 +108,34 @@ export default function Home() {
                 to="/products"
                 className="px-8 py-4 rounded-full bg-[#24221F] hover:bg-[#A66A4C] active:scale-[0.99] text-[#F4F0E8] text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm flex items-center gap-2 group"
               >
-                <span>Explore Collection</span>
+                <span>Explore Products</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
 
               <Link
-                to="/contact"
+                to="/categories"
                 className="px-6 py-4 rounded-full border border-[#24221F]/80 text-[#24221F] hover:bg-[#E8E0D5] text-xs font-semibold uppercase tracking-wider transition-all duration-300"
               >
-                Studio Consultation
+                Shop Categories
               </Link>
             </div>
 
-            {/* Atelier Spec Pill */}
-            <div className="pt-6 border-t border-[#E2DBD0] grid grid-cols-3 gap-4 text-xs">
-              <div>
-                <span className="text-[10px] uppercase tracking-wider text-[#A66A4C] font-bold block">Materiality</span>
-                <span className="text-[#24221F] font-medium text-[11px] sm:text-xs">FSC Certified Timber</span>
-              </div>
-              <div>
-                <span className="text-[10px] uppercase tracking-wider text-[#A66A4C] font-bold block">Delivery</span>
-                <span className="text-[#24221F] font-medium text-[11px] sm:text-xs">White-Glove Placement</span>
-              </div>
-              <div>
-                <span className="text-[10px] uppercase tracking-wider text-[#A66A4C] font-bold block">Atelier</span>
-                <span className="text-[#24221F] font-medium text-[11px] sm:text-xs">Anna Nagar, Chennai</span>
-              </div>
-            </div>
+            {/* Tech Specs Pill */}
+            {/* Tech Specs Pill */}
+<div className="pt-6 border-t border-[#E2DBD0] grid grid-cols-3 gap-4 text-xs">
+  <div>
+    <span className="text-[10px] uppercase tracking-wider text-[#A66A4C] font-bold block">Technology</span>
+    <span className="text-[#24221F] font-medium text-[11px] sm:text-xs">Premium Performance</span>
+  </div>
+  <div>
+    <span className="text-[10px] uppercase tracking-wider text-[#A66A4C] font-bold block">Support</span>
+    <span className="text-[#24221F] font-medium text-[11px] sm:text-xs">24/7 Customer Service</span>
+  </div>
+  <div>
+    <span className="text-[10px] uppercase tracking-wider text-[#A66A4C] font-bold block">Location</span>
+    <span className="text-[#24221F] font-medium text-[11px] sm:text-xs">Anna Nagar, Chennai</span>
+  </div>
+</div>
           </motion.div>
 
           {/* Right Column: Dominant Architectural Photography (Span 7) */}
@@ -146,22 +147,22 @@ export default function Home() {
           >
             <div className="relative aspect-4/3 sm:aspect-16/11 lg:aspect-4/3 rounded-[2.5rem] overflow-hidden bg-[#E8E0D5] shadow-2xl border border-[#E2DBD0]">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85"
-                alt="Contemporary light-filled living room featuring Bytecart architectural furniture"
+                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80"
+                alt="Premium laptop and workstation setup featuring high performance electronics"
                 className="w-full h-full object-cover editorial-img-hover"
                 loading="eager"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#24221F]/50 via-transparent to-transparent" />
 
-              {/* Floating Architectural Atelier Badge */}
+              {/* Floating Premium Computing Badge */}
               <div className="absolute bottom-6 left-6 right-6 sm:left-8 sm:right-auto bg-[#F4F0E8]/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-[#E2DBD0] shadow-lg max-w-sm flex items-center justify-between gap-4">
                 <div>
                   <span className="text-[9px] uppercase font-bold tracking-[0.2em] text-[#A66A4C] block">
                     BYTECART PRIVATE LIMITED
                   </span>
                   <p className="font-serif font-bold text-sm sm:text-base text-[#24221F]">
-                    Architectural Atelier & Living
+                    Premium Laptop & Computing Studio
                   </p>
                   <p className="text-[11px] text-[#77716A]">Anna Nagar, Chennai – 600040</p>
                 </div>
@@ -185,7 +186,7 @@ export default function Home() {
           Design Philosophy
         </span>
         <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif text-[#24221F] leading-tight font-light">
-          “Furniture should not simply occupy a room. It should <span className="italic font-normal text-[#A66A4C]">shape how the room feels.</span>”
+          “Technology should not simply occupy a space. It should <span className="italic font-normal text-[#A66A4C]">empower what you do within it.</span>”
         </h2>
         <div className="w-16 h-[1.5px] bg-[#A66A4C] mx-auto mt-4" />
       </section>
@@ -197,17 +198,17 @@ export default function Home() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#E2DBD0] pb-6">
           <div>
             <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-              Room Taxonomy
+              Product Taxonomy
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#24221F] tracking-tight mt-1">
-              Curated by Atmosphere
+              Curated by Bytecart
             </h2>
           </div>
           <Link
             to="/categories"
             className="text-xs font-semibold uppercase tracking-wider text-[#A66A4C] hover:text-[#24221F] inline-flex items-center gap-1 group"
           >
-            <span>Explore All Room Domains</span>
+            <span>Explore All Categories</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -296,13 +297,13 @@ export default function Home() {
             </div>
             <p className="text-base text-[#24221F] font-serif">No products available yet.</p>
             <p className="text-xs text-[#77716A] max-w-sm mx-auto font-light">
-              Pieces commissioned from our Chennai atelier will be catalogued here.
+              Products from our Anna Nagar inventory will be catalogued here.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#24221F] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#A66A4C] transition-colors mt-2"
             >
-              <span>Contact Studio</span>
+              <span>Contact Office</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -431,13 +432,13 @@ export default function Home() {
             <div className="lg:col-span-6 space-y-8">
               <div className="space-y-2">
                 <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C08A6A]">
-                  Material Integrity & Sourcing
+                  Technology & Performance
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-serif tracking-tight leading-tight">
-                  Designed for the way you live.
+                  Built around the technology you need.
                 </h2>
                 <p className="text-xs sm:text-sm text-[#BDB6AF] leading-relaxed font-light max-w-lg">
-                  Every joinery angle, hand-waxed grain, and bouclé weave is created in partnership with master woodworkers and heritage mills. We build pieces intended to age with graceful dignity.
+                  Discover laptops, computers and accessories selected for work, study, gaming, creativity and everyday performance.
                 </p>
               </div>
 
@@ -490,7 +491,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#E2DBD0] pb-6">
           <div>
             <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-              Fresh from Atelier
+              New Releases
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#24221F] tracking-tight mt-1">
               New Arrivals
@@ -591,19 +592,19 @@ export default function Home() {
       </section>
 
       {/* =========================================================================
-          7. BESPOKE ATELIER & ARCHITECTURAL CONSULTATION BANNER
+          7. PREMIUM CUSTOMIZATION & ENTERPRISE PROCUREMENT BANNER
           ========================================================================= */}
       <section className="px-4 sm:px-6 lg:px-12 max-w-[1600px] mx-auto">
         <div className="bg-[#E8E0D5]/50 border border-[#E2DBD0] rounded-3xl p-8 sm:p-14 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-2 max-w-xl">
             <span className="text-[10px] uppercase tracking-[0.24em] font-bold text-[#A66A4C]">
-              Architectural Collaborations
+              Enterprise Procurement & Custom Setups
             </span>
             <h3 className="text-2xl sm:text-3xl font-serif text-[#24221F]">
-              Need custom dimensions or bespoke room styling?
+              Need enterprise setups or custom system configurations?
             </h3>
             <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed">
-              Our Anna Nagar studio works alongside architects, interior designers, and discerning homeowners across Chennai and Pan-India.
+              Our Anna Nagar team works alongside IT departments, businesses, developers, and creators across Chennai and Pan-India.
             </p>
           </div>
 
@@ -612,13 +613,13 @@ export default function Home() {
               to="/contact"
               className="px-8 py-3.5 rounded-full bg-[#24221F] hover:bg-[#A66A4C] text-[#F4F0E8] text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm"
             >
-              Book Studio Consultation
+              Request Corporate Consultation
             </Link>
             <a
               href="tel:+914431544571"
               className="px-6 py-3.5 rounded-full border border-[#24221F] text-[#24221F] hover:bg-[#24221F] hover:text-white text-xs font-semibold uppercase tracking-wider transition-colors"
             >
-              Call 044 3154 4571
+              Call Office
             </a>
           </div>
         </div>

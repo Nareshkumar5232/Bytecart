@@ -121,7 +121,7 @@ export default function Navbar() {
               <button
                 onClick={openSearch}
                 className="flex items-center gap-2 p-2 rounded-full text-[#77716A] hover:text-[#24221F] hover:bg-[#EAE4DA]/50 transition-colors text-xs cursor-pointer"
-                title="Search furniture pieces (⌘K)"
+                title="Search product items (⌘K)"
                 aria-label="Search"
               >
                 <Search className="w-4 h-4 stroke-[1.8]" />

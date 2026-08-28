@@ -116,12 +116,12 @@ export default function Products() {
             Our Collection
           </h1>
           <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light">
-            Explore curated sectionals, dining furniture, sculptural lounge seating, and travertine tables designed for contemporary spaces.
+            Explore our curated selection of laptops, desktops, monitors, and accessories designed for modern computing.
           </p>
         </div>
 
         <div className="text-xs text-[#77716A] shrink-0 font-medium">
-          Showing <span className="text-[#24221F] font-bold">{products.length}</span> Handcrafted Pieces
+          Showing <span className="text-[#24221F] font-bold">{products.length}</span> Products
         </div>
       </div>
 

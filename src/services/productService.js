@@ -66,7 +66,7 @@ export const productService = {
       return list.find((p) => p.slug === slug || p.id === slug) || null;
     } catch (err) {
       console.error('Error in productService.getProductBySlug:', err);
-      throw new Error('Unable to load piece details.');
+      throw new Error('Unable to load product details.');
     }
   },
 
