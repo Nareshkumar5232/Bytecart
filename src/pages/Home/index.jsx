@@ -275,7 +275,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#E2DBD0] pb-6">
           <div>
             <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-              Signature Pieces
+              Signature Products
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#24221F] tracking-tight mt-1">
               The Collection

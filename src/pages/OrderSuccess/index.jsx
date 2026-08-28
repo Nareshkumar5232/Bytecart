@@ -45,7 +45,7 @@ export default function OrderSuccess() {
           Thank you for choosing Bytecart.
         </h1>
         <p className="text-xs sm:text-sm text-[#77716A] max-w-lg mx-auto leading-relaxed font-light">
-          Your order has been recorded. Our Chennai studio has begun coordinating white-glove inspection and delivery dispatch.
+          Your order has been recorded. Our Chennai office has begun coordinating quality inspection and delivery dispatch.
         </p>
       </div>
 

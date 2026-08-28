@@ -181,7 +181,7 @@ export default function CartDrawer() {
                       </span>
                     </div>
                     <div className="flex justify-between text-[11px] text-[#77716A]">
-                      <span>White-Glove Delivery & Assembly</span>
+                      <span>Secured Insured Shipping</span>
                       <span className="text-[#A66A4C] font-medium">Complimentary</span>
                     </div>
                   </div>
@@ -204,7 +204,7 @@ export default function CartDrawer() {
                   </div>
 
                   <p className="text-[10px] text-center text-[#77716A]">
-                    White-glove consultation & delivery coordination across India.
+                    Secured shipping & delivery coordination across India.
                   </p>
                 </div>
               )}

@@ -134,7 +134,7 @@ export default function Addresses() {
             Saved Delivery Addresses
           </h1>
           <p className="text-xs sm:text-sm text-[#77716A]">
-            Manage your residential and project destination address book.
+            Manage your residential and workplace destination address book.
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export default function Addresses() {
           </div>
           <h3 className="text-2xl font-serif text-[#24221F]">No saved addresses.</h3>
           <p className="text-xs text-[#77716A] leading-relaxed font-light">
-            Add your primary residence or project site for seamless checkout.
+            Add your primary residence or workplace for seamless checkout.
           </p>
           <button
             onClick={handleOpenAdd}
@@ -281,8 +281,8 @@ export default function Addresses() {
                   className="w-full px-4 py-2.5 rounded-xl bg-[#E8E0D5]/50 border border-[#E2DBD0] text-[#24221F]"
                 >
                   <option value="HOME">HOME</option>
-                  <option value="STUDIO">STUDIO / OFFICE</option>
-                  <option value="PROJECT">INTERIOR PROJECT</option>
+                  <option value="OFFICE">OFFICE / WORKPLACE</option>
+                  <option value="LAB">LAB / HEADQUARTERS</option>
                 </select>
               </div>
 

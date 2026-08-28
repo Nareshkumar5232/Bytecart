@@ -250,7 +250,7 @@ export default function Cart() {
           </button>
 
           <p className="text-[11px] text-center text-[#77716A] leading-relaxed">
-            Secure multi-step checkout • Direct coordination from our Chennai studio.
+            Secure multi-step checkout • Direct coordination from our Chennai office.
           </p>
         </div>
       </div>

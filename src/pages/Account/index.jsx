@@ -114,7 +114,7 @@ export default function Account() {
           <h3 className="text-lg font-serif text-[#24221F] group-hover:text-[#A66A4C] transition-colors">
             Delivery Addresses
           </h3>
-          <p className="text-xs text-[#77716A]">Manage saved residential and studio destinations.</p>
+          <p className="text-xs text-[#77716A]">Manage saved residential and workplace destinations.</p>
         </Link>
 
         <Link

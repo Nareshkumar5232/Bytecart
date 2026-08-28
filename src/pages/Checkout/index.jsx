@@ -220,7 +220,7 @@ export default function Checkout() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-              Direct Studio Fulfillment
+              Direct Brand Fulfillment
             </span>
             <h1 className="text-3xl sm:text-4xl font-serif text-[#24221F] tracking-tight">
               Secure Checkout

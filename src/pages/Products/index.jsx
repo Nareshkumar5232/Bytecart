@@ -137,7 +137,7 @@ export default function Products() {
                 : 'text-[#77716A] hover:text-[#24221F]'
             }`}
           >
-            All Pieces
+            All Products
           </button>
           {categories.map((cat) => (
             <button
@@ -162,7 +162,7 @@ export default function Products() {
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
-              placeholder="Search pieces..."
+              placeholder="Search products..."
               className="pl-8 pr-3 py-2 rounded-full bg-[#E8E0D5]/40 text-xs text-[#24221F] placeholder-[#9E9890] focus:bg-white focus:outline-none border border-transparent focus:border-[#E2DBD0]"
             />
           </div>

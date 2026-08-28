@@ -106,7 +106,7 @@ export function CartProvider({ children }) {
     0
   );
 
-  const deliveryCharge = 0; // Complimentary white-glove delivery
+  const deliveryCharge = 0; // Complimentary secured delivery
   const discount = appliedPromo ? Math.round((subtotal * appliedPromo.percentage) / 100) : 0;
   const tax = 0; // GST included in price
   const total = Math.max(0, subtotal + deliveryCharge - discount);

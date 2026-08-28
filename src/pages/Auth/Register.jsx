@@ -73,7 +73,7 @@ export default function Register() {
   return (
     <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto flex items-center justify-center">
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 rounded-[2.5rem] overflow-hidden border border-[#E2DBD0] bg-[#E8E0D5]/30 shadow-xl">
-        {/* Left Column: Architectural Imagery & Studio Ethos (Span 6) */}
+        {/* Left Column: Architectural Imagery & Brand Ethos (Span 6) */}
         <div className="hidden lg:flex lg:col-span-6 relative bg-[#24221F] text-[#F4F0E8] p-12 flex-col justify-between overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"

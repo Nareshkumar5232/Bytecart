@@ -55,7 +55,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* 4. Company & Registered Studio Info */}
+      {/* 4. Company & Registered Office Info */}
       <div className="bg-[#EAE4DA]/50 rounded-3xl p-8 sm:p-14 border border-[#E2DBD0] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-8 space-y-4">
           <Logo />
@@ -67,7 +67,7 @@ export default function About() {
               <strong className="text-[#24221F] font-semibold">Entity Name:</strong> BYTECART PRIVATE LIMITED
             </p>
             <p>
-              <strong className="text-[#24221F] font-semibold">Studio & Registered Office:</strong> Flat No. 2, Plot No. 1051, I Block, 35th Street, 18th Main Road, Anna Nagar, Chennai – 600040
+              <strong className="text-[#24221F] font-semibold">Registered Office & Headquarters:</strong> Flat No. 2, Plot No. 1051, I Block, 35th Street, 18th Main Road, Anna Nagar, Chennai – 600040
             </p>
             <p>
               <strong className="text-[#24221F] font-semibold">Official Inquiries:</strong> bytecartpvtltd@gmail.com

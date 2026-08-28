@@ -65,7 +65,7 @@ export default function ProductDetail() {
       });
     } else {
       navigator.clipboard.writeText(window.location.href);
-      addToast('Piece link copied to clipboard', 'info');
+      addToast('Product link copied to clipboard', 'info');
     }
   };
 
@@ -158,7 +158,7 @@ export default function ProductDetail() {
           <button
             onClick={handleShare}
             className="flex items-center gap-1.5 p-1.5 text-[#77716A] hover:text-[#24221F] transition-colors"
-            title="Share piece"
+            title="Share product"
           >
             <Share2 className="w-3.5 h-3.5" />
           </button>
