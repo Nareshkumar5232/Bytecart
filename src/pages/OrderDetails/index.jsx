@@ -275,8 +275,8 @@ export default function OrderDetails() {
               )}
 
               <div className="flex justify-between text-[#77716A]">
-                <span>GST (18% Included)</span>
-                <span>Included</span>
+                <span>Tax / GST</span>
+                <span>{order.tax > 0 ? formatCurrency(order.tax) : '₹0'}</span>
               </div>
             </div>
 

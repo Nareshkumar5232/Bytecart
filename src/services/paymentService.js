@@ -1,32 +1,17 @@
-/**
- * Payment Service Abstraction Layer
- * Interfaces with backend payment endpoints (/api/payments/create-order, /api/payments/verify).
- * Never stores secret keys on frontend.
- */
+import { apiRequest } from './api';
+
 export const paymentService = {
   async initializePaymentSession({ amount, customerEmail, customerPhone, customerName }) {
-    await new Promise((resolve) => setTimeout(resolve, 150));
-    // Ready to integrate with backend payment session endpoint:
-    return {
-      sessionId: 'BC_PAY_' + Date.now(),
-      amount,
-      currency: 'INR',
-      customer: {
-        name: customerName,
-        email: customerEmail,
-        contact: customerPhone,
-      },
-    };
+    return await apiRequest('/payments/create-order', {
+      method: 'POST',
+      body: { amount, customerEmail, customerPhone, customerName }
+    });
   },
 
-  async verifyPaymentSignature({ paymentId, orderId, signature }) {
-    await new Promise((resolve) => setTimeout(resolve, 150));
-    // When backend endpoint is connected:
-    // const res = await fetch('/api/payments/verify', { method: 'POST', body: ... });
-    return {
-      verified: true,
-      transactionId: paymentId || 'TXN_' + Date.now(),
-      status: 'Captured',
-    };
-  },
+  async verifyPaymentSignature({ razorpay_order_id, razorpay_payment_id, razorpay_signature }) {
+    return await apiRequest('/payments/verify', {
+      method: 'POST',
+      body: { razorpay_order_id, razorpay_payment_id, razorpay_signature }
+    });
+  }
 };

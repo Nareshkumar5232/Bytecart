@@ -231,8 +231,8 @@ export default function Cart() {
             )}
 
             <div className="flex justify-between text-[#77716A]">
-              <span>GST (Included)</span>
-              <span>18% (Included in Price)</span>
+              <span>Tax / GST</span>
+              <span>{tax > 0 ? formatCurrency(tax) : '₹0'}</span>
             </div>
 
             <div className="flex justify-between text-base sm:text-lg font-serif font-bold text-[#24221F] pt-3 border-t border-[#E2DBD0]">

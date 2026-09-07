@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useToast } from '../../context/ToastContext';
+import { feedbackService } from '../../services/feedbackService';
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
@@ -35,14 +36,21 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
 
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      await feedbackService.submitFeedback({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        category: formData.subject,
+        message: formData.message,
+      });
       setSubmitted(true);
-      addToast('Thank you. Your inquiry has been received by our Chennai office.', 'success', 5000);
+      addToast('Thank you. Your inquiry has been received and logged in our system.', 'success', 5000);
       setFormData({
         name: '',
         email: '',
@@ -50,7 +58,11 @@ export default function Contact() {
         subject: 'Custom Product Inquiry',
         message: '',
       });
-    }, 500);
+    } catch (err) {
+      addToast(err.message || 'Failed to submit inquiry. Please try again.', 'error');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (

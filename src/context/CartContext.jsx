@@ -108,8 +108,8 @@ export function CartProvider({ children }) {
 
   const deliveryCharge = 0; // Complimentary secured delivery
   const discount = appliedPromo ? Math.round((subtotal * appliedPromo.percentage) / 100) : 0;
-  const tax = 0; // GST included in price
-  const total = Math.max(0, subtotal + deliveryCharge - discount);
+  const tax = 0; // Default TAX: GST is 0 unless explicitly configured
+  const total = Math.max(0, subtotal + deliveryCharge - discount + tax);
 
   return (
     <CartContext.Provider

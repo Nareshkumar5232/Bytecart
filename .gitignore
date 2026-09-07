@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+Byte-admin/
+Byte-backend/
+"Byte backend/"
+.env
+.env.*
+!.env.example

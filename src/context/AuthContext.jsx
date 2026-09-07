@@ -5,7 +5,7 @@ import { useToast } from './ToastContext';
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => authService.getStoredUser());
   const [loading, setLoading] = useState(true);
   const { addToast } = useToast();
 
@@ -15,7 +15,8 @@ export function AuthProvider({ children }) {
         const current = await authService.getCurrentUser();
         setUser(current);
       } catch (err) {
-        console.error('Error fetching auth session', err);
+        console.error('Error verifying auth session', err);
+        setUser(null);
       } finally {
         setLoading(false);
       }
@@ -25,7 +26,8 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      const loggedUser = await authService.login(email, password);
+      const data = await authService.login({ email, password });
+      const loggedUser = data.user || data;
       setUser(loggedUser);
       addToast(`Welcome back, ${loggedUser.name}!`, 'success');
       return loggedUser;
@@ -37,7 +39,8 @@ export function AuthProvider({ children }) {
 
   const register = async ({ name, email, phone, password }) => {
     try {
-      const newUser = await authService.register({ name, email, phone, password });
+      const data = await authService.register({ name, email, phone, password });
+      const newUser = data.user || data;
       setUser(newUser);
       addToast(`Account created. Welcome to Bytecart, ${newUser.name}!`, 'success');
       return newUser;
@@ -47,8 +50,8 @@ export function AuthProvider({ children }) {
     }
   };
 
-  const logout = async () => {
-    await authService.logout();
+  const logout = () => {
+    authService.logout();
     setUser(null);
     addToast('You have been signed out.', 'info');
   };
@@ -65,16 +68,29 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const changePassword = async ({ currentPassword, newPassword }) => {
+    try {
+      const res = await authService.changePassword({ currentPassword, newPassword });
+      addToast('Password changed successfully.', 'success');
+      return res;
+    } catch (err) {
+      addToast(err.message || 'Failed to change password', 'error');
+      throw err;
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
         user,
         isAuthenticated: !!user,
+        isAdmin: user?.role === 'ADMIN',
         loading,
         login,
         register,
         logout,
         updateProfile,
+        changePassword,
       }}
     >
       {children}

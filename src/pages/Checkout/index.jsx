@@ -674,8 +674,8 @@ export default function Checkout() {
             )}
 
             <div className="flex justify-between text-[#77716A]">
-              <span>Tax (GST 18%)</span>
-              <span>Included</span>
+              <span>Tax / GST</span>
+              <span>{tax > 0 ? formatCurrency(tax) : '₹0'}</span>
             </div>
 
             <div className="flex justify-between text-base font-serif font-bold text-[#24221F] pt-3 border-t border-[#E2DBD0]">

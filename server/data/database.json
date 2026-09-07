@@ -1,0 +1,707 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_001",
+      "name": "System Administrator",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$7hYJzh1Xi.8wE.CnhDcnZeIcZX4pYDaY4sRHnd.MtLw93wa8Qebn6",
+      "role": "ADMIN",
+      "phone": "+91 98765 43210",
+      "createdAt": "2026-08-28T07:13:21.661Z",
+      "updatedAt": "2026-08-28T07:13:21.661Z"
+    },
+    {
+      "id": "usr_1787902523191_vva0",
+      "name": "Naresh Test User",
+      "email": "customer_1787902523128@example.com",
+      "password": "$2a$10$yQPxUTRnSEfAsLqZJ5pXS.c77Z3louJcK47r2Pw5/fx0xDBage2py",
+      "role": "USER",
+      "phone": "+91 99999 88888",
+      "addresses": [],
+      "createdAt": "2026-08-28T07:35:23.191Z",
+      "updatedAt": "2026-08-28T07:35:23.191Z"
+    },
+    {
+      "id": "usr_1787902678291_bbwi",
+      "name": "Naresh Test User",
+      "email": "customer_1787902678226@example.com",
+      "password": "$2a$10$dokWgCZtEnCAiaLfsPC40O4UUe.903jR6RJvO.j1iJMn3k9S0c8Mm",
+      "role": "USER",
+      "phone": "+91 99999 88888",
+      "addresses": [],
+      "createdAt": "2026-08-28T07:37:58.291Z",
+      "updatedAt": "2026-08-28T07:37:58.291Z"
+    }
+  ],
+  "products": [],
+  "categories": [
+    {
+      "id": "laptops",
+      "name": "Laptops",
+      "slug": "laptops",
+      "shortName": "Laptops",
+      "tagline": "High-performance machines for work and play.",
+      "description": "Discover laptops, computers and accessories selected for work, study, gaming, creativity and everyday performance.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.559Z"
+    },
+    {
+      "id": "desktops",
+      "name": "Desktops",
+      "slug": "desktops",
+      "shortName": "Desktops",
+      "tagline": "Power, speed, and upgradeability in a classic package.",
+      "description": "High-performance desktop PCs built for heavy tasks, creators, and professionals.",
+      "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "monitors",
+      "name": "Monitors",
+      "slug": "monitors",
+      "shortName": "Monitors",
+      "tagline": "Vibrant colors and expansive screen space.",
+      "description": "Widescreen, high-refresh-rate, and color-accurate displays for design, programming, and gaming.",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "pc-components",
+      "name": "PC Components",
+      "slug": "pc-components",
+      "shortName": "Components",
+      "tagline": "CPUs, GPUs, motherboards, and power supplies.",
+      "description": "Build, repair, or upgrade your personal computer with industry-leading PC hardware.",
+      "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "slug": "gaming",
+      "shortName": "Gaming",
+      "tagline": "Gear designed for absolute competitive edge.",
+      "description": "Console and PC gaming hardware, controllers, high-fidelity audio, and RGB accessories.",
+      "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "storage",
+      "name": "Storage",
+      "slug": "storage",
+      "shortName": "Storage",
+      "tagline": "Reliable speed for your operating system and files.",
+      "description": "High-speed SSDs, external hard drives, and reliable backup solutions for all your files.",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "networking",
+      "name": "Networking",
+      "slug": "networking",
+      "shortName": "Networking",
+      "tagline": "Seamless connectivity throughout your home and office.",
+      "description": "Wireless routers, network cards, switches, and structured cables for reliable connections.",
+      "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "slug": "accessories",
+      "shortName": "Accessories",
+      "tagline": "Keyboards, mice, webcams, and workspace add-ons.",
+      "description": "High-quality workspace essentials, mechanical keyboards, ergonomic mice, and premium audio equipment.",
+      "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "keyboards-mouse",
+      "name": "Keyboards & Mouse",
+      "slug": "keyboards-mouse",
+      "shortName": "Peripherals",
+      "tagline": "Tactile typing and precise navigation.",
+      "description": "Premium mechanical keyboards and optical mice for gaming and work.",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "slug": "audio",
+      "shortName": "Audio",
+      "tagline": "High-fidelity headphones and studio monitor speakers.",
+      "description": "Immersive sound solutions for streaming, editing, gaming, and pure listening pleasure.",
+      "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "webcams",
+      "name": "Webcams",
+      "slug": "webcams",
+      "shortName": "Webcams",
+      "tagline": "Crystal-clear video feeds for remote meetings and streaming.",
+      "description": "High-definition cameras with premium low-light sensors and integrated microphones.",
+      "image": "https://images.unsplash.com/photo-1603184017968-9450a5d0a6cf?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "laptop-bags",
+      "name": "Laptop Bags",
+      "slug": "laptop-bags",
+      "shortName": "Bags",
+      "tagline": "Sleek protective sleeves and backpacks.",
+      "description": "Durable, weather-resistant storage options designed to cushion your laptop on the move.",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "chargers-adapters",
+      "name": "Chargers & Adapters",
+      "slug": "chargers-adapters",
+      "shortName": "Power",
+      "tagline": "Fast and safe charging for all your devices.",
+      "description": "USB-C GaN wall chargers, multi-port adapters, and reliable power bricks.",
+      "image": "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    },
+    {
+      "id": "cables",
+      "name": "Cables",
+      "slug": "cables",
+      "shortName": "Cables",
+      "tagline": "High-speed data transfer and power delivery.",
+      "description": "Braided HDMI, Thunderbolt, DisplayPort, and USB cables built for maximum durability.",
+      "image": "https://images.unsplash.com/photo-1555538995-7ecd0b73091b?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-08-28T07:14:05.560Z"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brd_1",
+      "name": "Apple",
+      "slug": "apple",
+      "createdAt": "2026-08-28T07:37:44.894Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "BC85606",
+      "userId": "usr_1787902678291_bbwi",
+      "customerName": "Naresh Kumar",
+      "customerEmail": "customer_1787902678226@example.com",
+      "customerPhone": "+91 98400 12345",
+      "items": [
+        {
+          "id": "prod_1787902678307",
+          "name": "MacBook Pro 16 M3 Max Ultra Spec",
+          "slug": "macbook-pro-16-m3-max-ultra-spec-1",
+          "categoryName": "Laptops",
+          "price": 349900,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
+          "material": "",
+          "dimensions": "",
+          "subtotal": 349900
+        }
+      ],
+      "shippingAddress": {
+        "name": "Naresh Kumar",
+        "house": "14A, Grand Tech Avenue",
+        "street": "Anna Nagar West",
+        "area": "",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600040",
+        "phone": "+91 98400 12345"
+      },
+      "subtotal": 349900,
+      "deliveryCharge": 0,
+      "discount": 0,
+      "tax": 0,
+      "total": 349900,
+      "paymentMethod": "ONLINE",
+      "paymentProvider": "Razorpay",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN_TEST_1787902678322",
+      "orderStatus": "Shipped",
+      "timeline": [
+        {
+          "status": "Order Placed",
+          "date": "2026-08-28T07:37:58.325Z",
+          "done": true,
+          "current": false
+        },
+        {
+          "status": "Confirmed",
+          "date": "2026-08-28T07:37:58.325Z",
+          "done": true,
+          "current": true
+        },
+        {
+          "status": "Processing",
+          "date": null,
+          "done": false,
+          "current": false
+        },
+        {
+          "status": "Packed",
+          "date": null,
+          "done": false,
+          "current": false
+        },
+        {
+          "status": "Shipped",
+          "date": "2026-08-28T07:37:58.334Z",
+          "done": true,
+          "current": true
+        },
+        {
+          "status": "Out for Delivery",
+          "date": null,
+          "done": false,
+          "current": false
+        },
+        {
+          "status": "Delivered",
+          "date": null,
+          "done": false,
+          "current": false
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-08-28T07:37:58.325Z",
+      "updatedAt": "2026-08-28T07:37:58.334Z"
+    },
+    {
+      "id": "BC65038",
+      "userId": "usr_1787902523191_vva0",
+      "customerName": "Naresh Kumar",
+      "customerEmail": "customer_1787902523128@example.com",
+      "customerPhone": "+91 98400 12345",
+      "items": [
+        {
+          "id": "prod_1787902523207",
+          "name": "MacBook Pro 16 M3 Max Ultra Spec",
+          "slug": "macbook-pro-16-m3-max-ultra-spec",
+          "categoryName": "Laptops",
+          "price": 349900,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
+          "material": "",
+          "dimensions": "",
+          "subtotal": 349900
+        }
+      ],
+      "shippingAddress": {
+        "name": "Naresh Kumar",
+        "house": "14A, Grand Tech Avenue",
+        "street": "Anna Nagar West",
+        "area": "",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600040",
+        "phone": "+91 98400 12345"
+      },
+      "subtotal": 349900,
+      "deliveryCharge": 0,
+      "discount": 0,
+      "tax": 0,
+      "total": 349900,
+      "paymentMethod": "ONLINE",
+      "paymentProvider": "Razorpay",
+      "paymentStatus": "Paid",
+      "transactionId": "TXN_TEST_1787902523221",
+      "orderStatus": "Shipped",
+      "timeline": [
+        {
+          "status": "Order Placed",
+          "date": "2026-08-28T07:35:23.223Z",
+          "done": true,
+          "current": false
+        },
+        {
+          "status": "Confirmed",
+          "date": "2026-08-28T07:35:23.223Z",
+          "done": true,
+          "current": true
+        },
+        {
+          "status": "Processing",
+          "date": null,
+          "done": false,
+          "current": false
+        },
+        {
+          "status": "Packed",
+          "date": null,
+          "done": false,
+          "current": false
+        },
+        {
+          "status": "Shipped",
+          "date": "2026-08-28T07:35:23.232Z",
+          "done": true,
+          "current": true
+        },
+        {
+          "status": "Out for Delivery",
+          "date": null,
+          "done": false,
+          "current": false
+        },
+        {
+          "status": "Delivered",
+          "date": null,
+          "done": false,
+          "current": false
+        }
+      ],
+      "notes": "",
+      "createdAt": "2026-08-28T07:35:23.223Z",
+      "updatedAt": "2026-08-28T07:35:23.232Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY_1787902678325",
+      "orderId": "BC85606",
+      "userId": "usr_1787902678291_bbwi",
+      "customerName": "Naresh Kumar",
+      "customerEmail": "customer_1787902678226@example.com",
+      "amount": 349900,
+      "paymentMethod": "ONLINE",
+      "paymentStatus": "SUCCESS",
+      "gateway": "Razorpay",
+      "transactionId": "TXN_TEST_1787902678322",
+      "createdAt": "2026-08-28T07:37:58.325Z",
+      "updatedAt": "2026-08-28T07:37:58.325Z"
+    },
+    {
+      "id": "PAY_1787902523223",
+      "orderId": "BC65038",
+      "userId": "usr_1787902523191_vva0",
+      "customerName": "Naresh Kumar",
+      "customerEmail": "customer_1787902523128@example.com",
+      "amount": 349900,
+      "paymentMethod": "ONLINE",
+      "paymentStatus": "SUCCESS",
+      "gateway": "Razorpay",
+      "transactionId": "TXN_TEST_1787902523221",
+      "createdAt": "2026-08-28T07:35:23.223Z",
+      "updatedAt": "2026-08-28T07:35:23.223Z"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "fb_1787902678344",
+      "name": "Priya Sharma",
+      "email": "priya@techcorp.in",
+      "phone": "+91 98840 54321",
+      "subject": "Bulk Workstation Procurement",
+      "category": "Corporate & Bulk Inquiries",
+      "message": "Need quotation for 25 units of MacBook Pro 16 M3 Max for our design department.",
+      "read": false,
+      "status": "UNREAD",
+      "createdAt": "2026-08-28T07:37:58.344Z"
+    },
+    {
+      "id": "fb_1787902523242",
+      "name": "Priya Sharma",
+      "email": "priya@techcorp.in",
+      "phone": "+91 98840 54321",
+      "subject": "Bulk Workstation Procurement",
+      "category": "Corporate & Bulk Inquiries",
+      "message": "Need quotation for 25 units of MacBook Pro 16 M3 Max for our design department.",
+      "read": false,
+      "status": "UNREAD",
+      "createdAt": "2026-08-28T07:35:23.242Z"
+    }
+  ],
+  "reviews": [],
+  "settings": {
+    "storeName": "BYTECART Flagship Store",
+    "storeEmail": "contact@bytecart.in",
+    "storePhone": "+91 44 2621 8900",
+    "storeAddress": "14, 2nd Avenue, Anna Nagar, Chennai, Tamil Nadu 600040",
+    "taxEnabled": false,
+    "taxRate": 0,
+    "shippingCharge": 0,
+    "freeShippingThreshold": 0,
+    "paymentGateway": "Razorpay",
+    "paymentGatewayConnected": true,
+    "allowCOD": true
+  },
+  "auditLogs": [
+    {
+      "id": "log_1788767455859_rxlio",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767455835",
+      "details": "Deleted product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:50:55.859Z"
+    },
+    {
+      "id": "log_1788767455849_iy89a",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767455835",
+      "details": "Updated product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:50:55.849Z"
+    },
+    {
+      "id": "log_1788767455837_kduxa",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767455835",
+      "details": "Created product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:50:55.837Z"
+    },
+    {
+      "id": "log_1788767455819_8uj7e",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-09-07T07:50:55.819Z"
+    },
+    {
+      "id": "log_1788767401845_ey0cp",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767401820",
+      "details": "Deleted product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:50:01.845Z"
+    },
+    {
+      "id": "log_1788767401832_nnefi",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767401820",
+      "details": "Updated product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:50:01.832Z"
+    },
+    {
+      "id": "log_1788767401822_pe91g",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767401820",
+      "details": "Created product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:50:01.822Z"
+    },
+    {
+      "id": "log_1788767401811_x3fv7",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787904785775",
+      "details": "Deleted product \"test\"",
+      "createdAt": "2026-09-07T07:50:01.811Z"
+    },
+    {
+      "id": "log_1788767401794_j3oys",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-09-07T07:50:01.794Z"
+    },
+    {
+      "id": "log_1788767372658_bc21x",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767372632",
+      "details": "Deleted product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:49:32.658Z"
+    },
+    {
+      "id": "log_1788767372645_7tbg5",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767372632",
+      "details": "Updated product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:49:32.645Z"
+    },
+    {
+      "id": "log_1788767372634_7ta8y",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1788767372632",
+      "details": "Created product \"Dell Inspiron 15\"",
+      "createdAt": "2026-09-07T07:49:32.634Z"
+    },
+    {
+      "id": "log_1788767372615_e9gqt",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-09-07T07:49:32.615Z"
+    },
+    {
+      "id": "log_1788764643351_thl5n",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-09-07T07:04:03.351Z"
+    },
+    {
+      "id": "log_1787904785778_c2ahr",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787904785775",
+      "details": "Created product \"test\"",
+      "createdAt": "2026-08-28T08:13:05.778Z"
+    },
+    {
+      "id": "log_1787904737707_kkxjg",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787902523207",
+      "details": "Deleted product \"MacBook Pro 16 M3 Max Ultra Spec\"",
+      "createdAt": "2026-08-28T08:12:17.707Z"
+    },
+    {
+      "id": "log_1787904730692_ts2bf",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787902678307",
+      "details": "Deleted product \"MacBook Pro 16 M3 Max Ultra Spec\"",
+      "createdAt": "2026-08-28T08:12:10.692Z"
+    },
+    {
+      "id": "log_1787904727078_d97fw",
+      "adminId": "usr_admin_001",
+      "action": "DELETE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787904529636",
+      "details": "Deleted product \"Test Laptop\"",
+      "createdAt": "2026-08-28T08:12:07.078Z"
+    },
+    {
+      "id": "log_1787904529681_bnz4b",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787904529636",
+      "details": "Updated product \"Test Laptop\"",
+      "createdAt": "2026-08-28T08:08:49.681Z"
+    },
+    {
+      "id": "log_1787904529668_smljz",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787904529636",
+      "details": "Updated product \"Test Laptop\"",
+      "createdAt": "2026-08-28T08:08:49.669Z"
+    },
+    {
+      "id": "log_1787904529638_npea2",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787904529636",
+      "details": "Created product \"Test Laptop\"",
+      "createdAt": "2026-08-28T08:08:49.638Z"
+    },
+    {
+      "id": "log_1787904529615_yd9iz",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-08-28T08:08:49.615Z"
+    },
+    {
+      "id": "log_1787902870766_99tsr",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-08-28T07:41:10.766Z"
+    },
+    {
+      "id": "log_1787902678336_kfpju",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_ORDER_STATUS",
+      "entity": "orders",
+      "entityId": "BC85606",
+      "details": "Updated status to Shipped Paid",
+      "createdAt": "2026-08-28T07:37:58.336Z"
+    },
+    {
+      "id": "log_1787902678309_excre",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787902678307",
+      "details": "Created product \"MacBook Pro 16 M3 Max Ultra Spec\"",
+      "createdAt": "2026-08-28T07:37:58.309Z"
+    },
+    {
+      "id": "log_1787902678223_i1nwr",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-08-28T07:37:58.223Z"
+    },
+    {
+      "id": "log_1787902523234_t89gf",
+      "adminId": "usr_admin_001",
+      "action": "UPDATE_ORDER_STATUS",
+      "entity": "orders",
+      "entityId": "BC65038",
+      "details": "Updated status to Shipped Paid",
+      "createdAt": "2026-08-28T07:35:23.234Z"
+    },
+    {
+      "id": "log_1787902523208_6do75",
+      "adminId": "usr_admin_001",
+      "action": "CREATE_PRODUCT",
+      "entity": "products",
+      "entityId": "prod_1787902523207",
+      "details": "Created product \"MacBook Pro 16 M3 Max Ultra Spec\"",
+      "createdAt": "2026-08-28T07:35:23.208Z"
+    },
+    {
+      "id": "log_1787902523124_za99i",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-08-28T07:35:23.124Z"
+    },
+    {
+      "id": "log_1787901340168_4fkur",
+      "adminId": "usr_admin_001",
+      "action": "ADMIN_LOGIN",
+      "entity": "users",
+      "entityId": "usr_admin_001",
+      "details": "Administrator logged in successfully.",
+      "createdAt": "2026-08-28T07:15:40.168Z"
+    }
+  ]
+}
