@@ -254,6 +254,7 @@ export function HoverFooter() {
         { label: "My Orders", href: "/my-orders" },
         { label: "Wishlist", href: "/wishlist" },
         { label: "Account", href: "/account" },
+        { label: "Admin Portal", href: "/admin/login" },
       ],
     },
   ];

@@ -72,6 +72,7 @@ export default function App() {
                     }
                   >
                     <Route index element={<AdminDashboard />} />
+                    <Route path="dashboard" element={<AdminDashboard />} />
                     <Route path="orders" element={<AdminOrders />} />
                     <Route path="orders/:orderId" element={<AdminOrderDetails />} />
                     <Route path="payments" element={<AdminPayments />} />

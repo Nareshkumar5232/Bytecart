@@ -1,4 +1,5 @@
-const API_BASE = '/api';
+const RAW_API_URL = import.meta.env.VITE_API_URL || 'https://byte-backend-mhke.onrender.com/api';
+const API_BASE = RAW_API_URL.endsWith('/api') ? RAW_API_URL : `${RAW_API_URL.replace(/\/+$/, '')}/api`;
 
 export async function apiRequest(endpoint, { method = 'GET', body, headers = {}, token } = {}) {
   const finalToken = token || localStorage.getItem('bytecart_auth_token_v1');

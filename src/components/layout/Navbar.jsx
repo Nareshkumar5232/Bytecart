@@ -13,6 +13,7 @@ import {
   MapPin,
   LogOut,
   ChevronDown,
+  ShieldCheck,
 } from 'lucide-react';
 import Logo from '../common/Logo';
 import { useCart } from '../../context/CartContext';
@@ -37,7 +38,7 @@ export default function Navbar() {
   const { totalItemsCount, openCart } = useCart();
   const { wishlistCount } = useWishlist();
   const { openSearch } = useSearch();
-  const { user, isAuthenticated, logout } = useAuth();
+  const { user, isAuthenticated, isAdmin, logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -185,6 +186,15 @@ export default function Navbar() {
                         </div>
 
                         <div className="py-1">
+                          {isAdmin && (
+                            <Link
+                              to="/admin"
+                              className="flex items-center gap-2.5 px-4 py-2 text-xs font-semibold text-[#A66A4C] hover:bg-[#EAE4DA]/60 transition-colors"
+                            >
+                              <ShieldCheck className="w-3.5 h-3.5 text-[#A66A4C]" />
+                              <span>Admin Console</span>
+                            </Link>
+                          )}
                           <Link
                             to="/account"
                             className="flex items-center gap-2.5 px-4 py-2 text-xs text-[#24221F] hover:bg-[#EAE4DA]/60 transition-colors"
@@ -321,6 +331,15 @@ export default function Navbar() {
 
                   {isAuthenticated ? (
                     <>
+                      {isAdmin && (
+                        <Link
+                          to="/admin"
+                          className="flex items-center justify-between py-2 text-xs font-semibold uppercase tracking-wider text-[#A66A4C]"
+                        >
+                          <span>Admin Console</span>
+                          <ShieldCheck className="w-4 h-4 text-[#A66A4C]" />
+                        </Link>
+                      )}
                       <Link
                         to="/my-orders"
                         className="flex items-center justify-between py-2 text-xs font-semibold uppercase tracking-wider text-[#24221F]"
