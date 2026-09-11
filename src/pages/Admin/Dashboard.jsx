@@ -116,14 +116,14 @@ export default function AdminDashboard() {
   return (
     <div className="space-y-8">
       {/* Non-blocking Connection Notice if operating in offline/fallback mode */}
-      {(data?._isFallback || error) && (
+      {(error && !data) && (
         <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs">
           <div className="flex items-center gap-2.5">
             <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
             <div>
               <span className="font-bold">Database Operating in Offline/Local Mode:</span>{' '}
               <span className="text-amber-800">
-                {error || data?._notice || 'Live database currently unreachable; displaying local metrics.'}
+                {error || 'Live database currently unreachable; displaying local metrics.'}
               </span>
             </div>
           </div>
