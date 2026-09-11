@@ -12,11 +12,36 @@ export const productService = {
 
     const queryString = query.toString();
     const endpoint = queryString ? `/products?${queryString}` : '/products';
-    return await apiRequest(endpoint);
+    try {
+      const res = await apiRequest(endpoint);
+      return Array.isArray(res) ? res : (res?.products || []);
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          const fallbackEndpoint = queryString ? `/product?${queryString}` : '/product';
+          const res = await apiRequest(fallbackEndpoint);
+          return Array.isArray(res) ? res : (res?.products || []);
+        } catch {
+          return [];
+        }
+      }
+      return [];
+    }
   },
 
   async getProductBySlug(slug) {
-    return await apiRequest(`/products/${slug}`);
+    try {
+      return await apiRequest(`/products/${slug}`);
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          return await apiRequest(`/product/${slug}`);
+        } catch {
+          return null;
+        }
+      }
+      return null;
+    }
   },
 
   async getFeaturedProducts(limit = 4) {

@@ -1,8 +1,8 @@
-const RAW_API_URL = import.meta.env.VITE_API_URL || 'https://byte-backend-mhke.onrender.com/api';
+const RAW_API_URL = import.meta.env.VITE_API_URL || '/api';
 const API_BASE = RAW_API_URL.endsWith('/api') ? RAW_API_URL : `${RAW_API_URL.replace(/\/+$/, '')}/api`;
 
 export async function apiRequest(endpoint, { method = 'GET', body, headers = {}, token } = {}) {
-  const finalToken = token || localStorage.getItem('bytecart_auth_token_v1');
+  const finalToken = token || localStorage.getItem('bytecart_auth_token_v1') || localStorage.getItem('bytecart_admin_token_v1');
   const finalHeaders = {
     'Content-Type': 'application/json',
     ...headers,
@@ -27,7 +27,10 @@ export async function apiRequest(endpoint, { method = 'GET', body, headers = {},
 
     if (!res.ok) {
       const errorMsg = data?.error || data?.message || `Request failed with status ${res.status}`;
-      throw new Error(errorMsg);
+      const error = new Error(errorMsg);
+      error.status = res.status;
+      error.data = data;
+      throw error;
     }
 
     return data;

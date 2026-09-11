@@ -1,19 +1,83 @@
 import { apiRequest } from './api';
+import { categoriesData } from '../data/categoriesData';
 
 export const adminService = {
   // Dashboard stats
   async getDashboardStats() {
-    return await apiRequest('/admin/dashboard');
+    try {
+      const res = await apiRequest('/admin/dashboard');
+      return res;
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          const res = await apiRequest('/admin/dashboard/stats');
+          return {
+            kpis: {
+              totalOrders: res.totalOrders ?? res.kpis?.totalOrders ?? 0,
+              pendingOrders: res.pendingOrders ?? res.kpis?.pendingOrders ?? 0,
+              completedOrders: res.completedOrders ?? res.kpis?.completedOrders ?? 0,
+              cancelledOrders: res.cancelledOrders ?? res.kpis?.cancelledOrders ?? 0,
+              totalRevenue: res.totalRevenue ?? res.kpis?.totalRevenue ?? 0,
+              pendingPayments: res.pendingPayments ?? res.kpis?.pendingPayments ?? 0,
+              successfulPayments: res.successfulPayments ?? res.kpis?.successfulPayments ?? 0,
+              failedPayments: res.failedPayments ?? res.kpis?.failedPayments ?? 0,
+              totalProducts: res.totalProducts ?? res.kpis?.totalProducts ?? 0,
+              lowStockProducts: res.lowStockProducts ?? res.kpis?.lowStockProducts ?? 0,
+              totalCustomers: res.totalCustomers ?? res.kpis?.totalCustomers ?? 0,
+              unreadFeedback: res.unreadFeedback ?? res.kpis?.unreadFeedback ?? 0,
+            },
+            recentOrders: res.recentOrders || [],
+            settings: res.settings || {},
+          };
+        } catch (innerErr) {
+          console.warn('Dashboard stats fallback endpoint failed:', innerErr);
+        }
+      }
+      // Return safe fallback metrics rather than breaking the admin dashboard
+      return {
+        kpis: {
+          totalOrders: 0,
+          pendingOrders: 0,
+          completedOrders: 0,
+          cancelledOrders: 0,
+          totalRevenue: 0,
+          pendingPayments: 0,
+          successfulPayments: 0,
+          failedPayments: 0,
+          totalProducts: 0,
+          lowStockProducts: 0,
+          totalCustomers: 0,
+          unreadFeedback: 0,
+        },
+        recentOrders: [],
+        settings: {},
+        _isFallback: true,
+        _notice: err.message || 'Database connection currently operating in local mode',
+      };
+    }
   },
 
   // Orders
   async getOrders(params = {}) {
-    const query = new URLSearchParams();
-    if (params.status && params.status !== 'ALL') query.set('status', params.status);
-    if (params.paymentStatus && params.paymentStatus !== 'ALL') query.set('paymentStatus', params.paymentStatus);
-    if (params.search) query.set('search', params.search);
-    const qs = query.toString();
-    return await apiRequest(qs ? `/admin/orders?${qs}` : '/admin/orders');
+    try {
+      const query = new URLSearchParams();
+      if (params.status && params.status !== 'ALL') query.set('status', params.status);
+      if (params.paymentStatus && params.paymentStatus !== 'ALL') query.set('paymentStatus', params.paymentStatus);
+      if (params.search) query.set('search', params.search);
+      const qs = query.toString();
+      const res = await apiRequest(qs ? `/admin/orders?${qs}` : '/admin/orders');
+      return Array.isArray(res) ? res : (res?.orders || []);
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          const res = await apiRequest('/order');
+          return Array.isArray(res) ? res : (res?.orders || []);
+        } catch {
+          return [];
+        }
+      }
+      return [];
+    }
   },
 
   async updateOrderStatus(orderId, { orderStatus, paymentStatus }) {
@@ -25,16 +89,42 @@ export const adminService = {
 
   // Payments
   async getPayments() {
-    return await apiRequest('/admin/payments');
+    try {
+      const res = await apiRequest('/admin/payments');
+      return Array.isArray(res) ? res : (res?.payments || []);
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          const res = await apiRequest('/payment');
+          return Array.isArray(res) ? res : [];
+        } catch {
+          return [];
+        }
+      }
+      return [];
+    }
   },
 
   // Products CRUD
   async getProducts(params = {}) {
-    const query = new URLSearchParams();
-    if (params.category && params.category !== 'all') query.set('category', params.category);
-    if (params.search) query.set('search', params.search);
-    const qs = query.toString();
-    return await apiRequest(qs ? `/products?${qs}` : '/products');
+    try {
+      const query = new URLSearchParams();
+      if (params.category && params.category !== 'all') query.set('category', params.category);
+      if (params.search) query.set('search', params.search);
+      const qs = query.toString();
+      const res = await apiRequest(qs ? `/products?${qs}` : '/products');
+      return Array.isArray(res) ? res : (res?.products || []);
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          const res = await apiRequest('/product');
+          return Array.isArray(res) ? res : (res?.products || []);
+        } catch {
+          return [];
+        }
+      }
+      return [];
+    }
   },
 
   async createProduct(productData) {
@@ -59,7 +149,20 @@ export const adminService = {
 
   // Categories CRUD
   async getCategories() {
-    return await apiRequest('/categories');
+    try {
+      const res = await apiRequest('/categories');
+      return Array.isArray(res) ? res : (res?.categories || []);
+    } catch (err) {
+      if (err.status === 404 || err.message?.includes('404')) {
+        try {
+          const res = await apiRequest('/admin/categories');
+          return Array.isArray(res) ? res : (res?.categories || []);
+        } catch {
+          return categoriesData || [];
+        }
+      }
+      return categoriesData || [];
+    }
   },
 
   async createCategory(categoryData) {

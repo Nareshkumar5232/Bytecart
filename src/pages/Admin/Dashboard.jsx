@@ -45,23 +45,7 @@ export default function AdminDashboard() {
     );
   }
 
-  if (error) {
-    return (
-      <div className="p-8 rounded-3xl bg-red-50 border border-red-200 text-center space-y-4">
-        <AlertTriangle className="w-8 h-8 text-red-600 mx-auto" />
-        <div>
-          <h3 className="text-base font-serif font-bold text-red-900">Database Connection Notice</h3>
-          <p className="text-xs text-red-700 mt-1">{error}</p>
-        </div>
-        <button
-          onClick={fetchStats}
-          className="px-5 py-2 rounded-full bg-[#24221F] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#A66A4C]"
-        >
-          Retry Connection
-        </button>
-      </div>
-    );
-  }
+
 
   const kpis = data?.kpis || {
     totalOrders: 0,
@@ -131,6 +115,26 @@ export default function AdminDashboard() {
 
   return (
     <div className="space-y-8">
+      {/* Non-blocking Connection Notice if operating in offline/fallback mode */}
+      {(data?._isFallback || error) && (
+        <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs">
+          <div className="flex items-center gap-2.5">
+            <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+            <div>
+              <span className="font-bold">Database Operating in Offline/Local Mode:</span>{' '}
+              <span className="text-amber-800">
+                {error || data?._notice || 'Live database currently unreachable; displaying local metrics.'}
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={fetchStats}
+            className="px-3 py-1.5 rounded-full bg-[#24221F] text-white text-[11px] font-semibold tracking-wider uppercase hover:bg-[#A66A4C] cursor-pointer shrink-0 transition-colors"
+          >
+            Retry Connection
+          </button>
+        </div>
+      )}
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
